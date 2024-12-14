@@ -47,11 +47,9 @@ jobs:
        run: docker build -f Dockerfile -t myapp:latest .
 
      - name: Scan with docker scout
-       uses: uses: CoinFabrik/scout-actions@v2.4
+       uses: docker/scout-action@v1.16.1
        with:
-         target: # default is .
-         scout_args: -v 
-    
+         target: .
 
           
         
